@@ -33,7 +33,14 @@ class Analisador(object):
 
     def tabela(self):
         """."""
+        print('Tabela de variáveis')
         for index, value in enumerate(self.tab):
+            print('%s ... %s' % (index, value))
+
+    def tabela_2(self):
+        """."""
+        print('Tabela de palavras reservadas')
+        for index, value in enumerate(self.tabP):
             print('%s ... %s' % (index, value))
 
     def sigma1(self):
@@ -94,6 +101,7 @@ class Analisador(object):
         if self.index == len(self.tape):
             print(self.output)
             self.tabela()
+            self.tabela_2()
         elif(self.isBlank()):
             self.up_index()
             self.e0()
