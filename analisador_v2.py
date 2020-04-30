@@ -1,8 +1,9 @@
+# Gabriel Diniz Gisoldo RA: 22214007-1
 class Analisador(object):
-    """docstring for Analisador."""
+    """Analisador lexico v2."""
 
-    def __init__(self):
-        self.tape = ''
+    def __init__(self, tape):
+        self.tape = tape
         self.index = 0
         self.tempS = ''
         self.tempC = ''
@@ -171,13 +172,6 @@ class Analisador(object):
             self.up_index()
             self.e6()
 
-    def main(self):
+    def start(self):
         """."""
-        self.tape = input("Digite a palavra: ")
-        self.tape += ' '
         self.e0()
-        input('')
-        return
-
-analisador = Analisador()
-analisador.main()

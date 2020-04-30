@@ -1,5 +1,5 @@
 class Analisador(object):
-    """docstring for Analisador."""
+    """Analisador lexico."""
 
     def __init__(self):
         self.tape = ''
