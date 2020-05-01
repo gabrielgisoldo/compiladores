@@ -66,7 +66,6 @@ class AnalisadorSemantico(object):
                 self.up_index()
                 self.e0()
             elif self.string[self.idx] == ')':
-                self.up_index()
                 return
             else:
                 self.rejeita()
@@ -80,4 +79,14 @@ class AnalisadorSemantico(object):
             self.pilha += 1
             self.e0()
             self.pilha -= 1
+            self.e3()
+
+    def e3(self):
+        """."""
+        if self.fim_string():
+            self.rejeita()
+        elif self.string[self.idx] == ')':
+            self.up_index()
             self.e1()
+        else:
+            self.rejeita()
