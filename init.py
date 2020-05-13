@@ -1,6 +1,6 @@
 # Gabriel Diniz Gisoldo RA: 22214007-1
 # import analisador_v2 as analisador_mod
-import analisador_semantico
+import analisador_sintatico
 
 # Pega o input
 tape = input("Digite a palavra: ")
@@ -8,7 +8,7 @@ tape = input("Digite a palavra: ")
 tape = tape.replace(' ', '')
 
 # Instancia o analisador lexico
-analisador = analisador_semantico.AnalisadorSemantico(tape)
+analisador = analisador_sintatico.AnalisadorSintatico(tape)
 # Executa o nalisador lexico
 analisador.start()
 

@@ -1,6 +1,6 @@
 # Gabriel Diniz Gisoldo RA: 22214007-1
-class AnalisadorSemantico(object):
-    """Analisador semantico."""
+class AnalisadorSintatico(object):
+    """Analisador sintatico."""
 
     def __init__(self, string, idx=0):
         self.string = string
