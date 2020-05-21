@@ -2,9 +2,13 @@ t_count = 1
 def getTemp():
     """."""
     global t_count
-    aux = t_count
+    if t_count < 10:
+        aux = '0%s
+        ' % t_count
+    else:
+        aux = str(t_count)
     t_count += 1
-    return str(aux)
+    return aux
 
 def op_pri(op):
     """."""
